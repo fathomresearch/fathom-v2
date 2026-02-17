@@ -1,0 +1,1010 @@
+/* ============================================
+   FATHOM BRAND COLORS - v2 / 2026 Guidelines
+   ============================================ */
+:root {
+  /* Primary Brand Colors */
+  --fathom-teal: #00D7B4;
+  --fathom-navy: #071A2B;
+  --fathom-navy-light: #243A53;
+
+  /* Neutral Palette */
+  --gray-1: #F8F8F8;
+  --gray-2: #DADCDD;
+  --gray-3: #BBBCC0;
+  --gray-4: #747575;
+  --white: #FFFFFF;
+
+  /* Secondary Palette */
+  --purple: #524B7B;
+  --blue: #1B75FF;
+  --coral: #FF4369;
+
+  /* Typography Roles — per brand guidelines */
+  /* IBM Plex Serif = primary headlines */
+  /* IBM Plex Sans  = body copy + emphasis */
+  /* Montserrat     = sub-headings (tertiary) */
+  /* IBM Plex Mono  = labels, eyebrows, metadata */
+  --font-headline: 'IBM Plex Serif', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-sub: 'Montserrat', sans-serif;
+  --font-label: 'IBM Plex Mono', monospace;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fathom-navy);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   Per brand guidelines:
+   - Headlines: IBM Plex Serif Light, ALL CAPS
+   - Sub-headings: Montserrat Semibold, ALL CAPS, tracking 5px
+   - Body: IBM Plex Sans Regular (18pt, leading 28px)
+   - Emphasis: IBM Plex Sans Semibold
+   - Labels/eyebrows: IBM Plex Mono
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: 300; /* Light */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--fathom-navy);
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(40px, 5vw, 72px); }
+h2 { font-size: clamp(32px, 4vw, 56px); }
+h3 { font-size: clamp(24px, 3vw, 40px); }
+
+/* Sub-heading style — Montserrat Semibold, ALL CAPS, wide tracking */
+.sub-heading {
+  font-family: var(--font-sub);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--gray-4);
+}
+
+/* Eyebrow / label style — IBM Plex Mono */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--fathom-teal);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--fathom-navy);
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   HEADER / NAV
+   Wordmark only — no icon in sticky nav
+   ============================================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--fathom-navy);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Wordmark only — use Fathom_Wordmark_Teal.svg (not the lockup) */
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.header-nav a:not(.header-cta) {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gray-3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:not(.header-cta):hover {
+  color: var(--fathom-teal);
+}
+
+.header-cta {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  color: var(--fathom-teal);
+  border: 1px solid var(--fathom-teal);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.header-cta:hover {
+  background: var(--fathom-teal);
+  color: var(--fathom-navy);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: var(--fathom-teal);
+  color: var(--fathom-navy);
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--fathom-teal);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--fathom-teal);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-secondary-light {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-label);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-light:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.05);
+}
+
+/* ============================================
+   HERO — POOL SECTION (shared base)
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--fathom-navy);
+  padding-top: 72px;
+}
+
+/* Pool background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/pool-background.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.pool-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  text-align: center;
+}
+
+/* ============================================
+   BUBBLES — Gentle pulse animation
+   Replaces the rising/rotating animation
+   ============================================ */
+.bubbles-container {
+  position: relative;
+  min-height: 420px;
+  margin: 3rem auto 0;
+  max-width: 900px;
+}
+
+.bubble {
+  position: absolute;
+  cursor: pointer;
+}
+
+.bubble-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Gentle pulse — no rising, no rotation */
+@keyframes bubblePulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.03) translateY(-8px);
+    opacity: 1;
+  }
+}
+
+.bubble-1 {
+  bottom: 20px;
+  left: 0;
+  width: 280px;
+  height: 280px;
+  animation: bubblePulse 7s ease-in-out infinite;
+}
+
+.bubble-2 {
+  bottom: 60px;
+  left: 35%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 260px;
+  animation: bubblePulse 8s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+
+.bubble-3 {
+  bottom: 20px;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  animation: bubblePulse 6.5s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Override transform on hover without breaking the base */
+.bubble:hover {
+  z-index: 10;
+}
+
+.bubble:hover .bubble-graphic {
+  filter: drop-shadow(0 6px 24px rgba(0, 215, 180, 0.3));
+}
+
+.bubble-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  text-align: center;
+}
+
+.bubble-content p {
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.bubble-cta {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 215, 180, 0.9);
+  color: var(--fathom-navy);
+  border: none;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bubble:hover .bubble-cta {
+  display: inline-block;
+}
+
+.bubble-cta:hover {
+  background: var(--fathom-teal);
+}
+
+.hero-cta {
+  margin-top: 3.5rem;
+}
+
+/* ============================================
+   FATHOM LOGO in hero
+   ============================================ */
+.fathom-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   HERO POV TEXT (used in Version A and B)
+   ============================================ */
+.hero-pov {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.hero-pov-headline {
+  font-family: var(--font-headline);
+  font-weight: 300;
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0;
+}
+
+.hero-pov-sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-3);
+  max-width: 520px;
+  margin: 1.25rem auto 0;
+  line-height: 1.6;
+}
+
+/* ============================================
+   POSITIONING SECTION
+   ============================================ */
+.positioning {
+  padding: 10rem 0;
+  background: var(--fathom-navy);
+  text-align: center;
+}
+
+.positioning .eyebrow {
+    color: var(--white);
+}
+
+.positioning h2 {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 300;
+  color: var(--white);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.1;
+}
+
+.positioning-highlight {
+  color: var(--fathom-teal);
+}
+
+/* ============================================
+   PHILOSOPHY SECTIONS
+   Image overlay sections for case studies
+   Headlines: IBM Plex Serif, NO italic, NO quotes, bold statements
+   ============================================ */
+.philosophy-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.philosophy-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.35);
+  z-index: 0;
+}
+
+.philosophy-section-1::before { background-image: url('/images/case-nascar.webp'); }
+.philosophy-section-2::before { background-image: url('/images/case-sportsbook.webp'); }
+.philosophy-section-3::before { background-image: url('/images/case-wealth.webp'); }
+
+.philosophy-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Eyebrow label above philosophy headline */
+.philosophy-eyebrow {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--fathom-teal);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Philosophy headline: IBM Plex Serif Light, NO quotes, NO italic */
+.philosophy-label {
+  font-family: var(--font-headline);
+  font-weight: 300;
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 2.5rem;
+  font-style: normal;
+  text-shadow: none;
+  max-width: 800px;
+}
+
+.philosophy-value {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-2);
+  margin-bottom: 3rem;
+  max-width: 680px;
+  line-height: 1.75;
+}
+
+.philosophy-value strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.philosophy-cta {
+  text-align: left;
+}
+
+/* ============================================
+   COMPANY OVERVIEW
+   ============================================ */
+.company-overview {
+  padding: 8rem 0;
+  background: var(--fathom-navy);
+  color: var(--white);
+}
+
+.company-overview h2 {
+  color: var(--white);
+  margin-bottom: 2.5rem;
+}
+
+.overview-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-content p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--gray-3);
+  margin-bottom: 1.5rem;
+}
+
+.overview-highlight {
+  color: var(--fathom-teal);
+  font-weight: 600;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta-section {
+  padding: 8rem 0;
+  background: var(--fathom-navy-light);
+  text-align: center;
+}
+
+.cta-content h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  color: var(--gray-3);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.75;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   FOOTER
+   Icon lives here as a sign-off element
+   ============================================ */
+.footer {
+  background: var(--fathom-navy);
+  color: var(--white);
+  padding: 5rem 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer uses wordmark (white version) */
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Icon as footer sign-off element */
+.footer-icon-signoff {
+  height: 48px;
+  width: auto;
+  opacity: 0.4;
+  margin-top: 1rem;
+  display: block;
+}
+
+.footer-section h3 {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gray-4);
+  margin-bottom: 1.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--gray-4);
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  color: var(--gray-3);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--fathom-teal);
+}
+
+.footer-link-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--gray-4);
+  font-size: 14px;
+  margin: 0;
+}
+/* ============================================
+   CASE STUDIES LANDING PAGE
+   ============================================ */
+.case-studies-hero {
+  padding: 10rem 0 5rem;
+  background: var(--fathom-navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.case-studies-hero .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.case-studies-hero h1 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.case-studies-hero p {
+  font-size: 18px;
+  color: var(--gray-3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.case-studies-grid-section {
+  padding: 6rem 0;
+  background: var(--gray-1);
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2rem;
+}
+
+.case-card {
+  background: var(--white);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(7, 26, 43, 0.1);
+}
+
+.case-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--gray-2);
+}
+
+.case-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.4s ease;
+}
+
+.case-card:hover .case-card-image img {
+  transform: scale(1.04);
+}
+
+.case-card-content {
+  padding: 2rem;
+}
+
+/* Case card headline: IBM Plex Serif, ALL CAPS */
+.case-card-content h3 {
+  font-family: var(--font-headline);
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--fathom-navy);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.case-card-meta {
+  font-family: var(--font-label);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gray-4);
+  margin-bottom: 1rem;
+}
+
+.case-card-description {
+  font-size: 15px;
+  color: var(--gray-4);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+.case-card .btn-secondary {
+  color: var(--fathom-navy);
+  border-color: var(--fathom-navy);
+  font-size: 11px;
+}
+
+.case-card .btn-secondary:hover {
+  background: var(--fathom-navy);
+  color: var(--white);
+}
+
+/* ============================================
+   INDIVIDUAL CASE STUDY PAGE
+   ============================================ */
+.case-study {
+  background: var(--white);
+}
+
+.case-hero-section {
+  position: relative;
+  height: 75vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 72px;
+}
+
+.case-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.case-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.case-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(7, 26, 43, 0.55) 0%,
+    rgba(7, 26, 43, 0.75) 100%);
+  z-index: 2;
+}
+
+.case-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--white);
+  padding: 0 2rem;
+}
+
+/* Eyebrow label above case headline */
+.case-client {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--fathom-teal);
+  margin-bottom: 1.25rem;
+}
+
+/* Case hero headline: IBM Plex Serif, ALL CAPS */
+.case-hero-content h1 {
+  font-family: var(--font-headline);
+  font-weight: 300;
+  font-size: clamp(32px, 5vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--white);
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+}
+
+.case-industry {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-3);
+}
+
+.case-content {
+  padding: 6rem 0;
+}
+
+.case-body {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.case-body h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--fathom-navy);
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.case-body h3 {
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: var(--fathom-navy);
+  margin-top: 2rem;
+  margin-bottom: 0.875rem;
+}
+
+.case-body p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray-4);
+  margin-bottom: 1.5rem;
+}
+
+.case-body ul,
+.case-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.75rem;
+}
+
+.case-body li {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray-4);
+  margin-bottom: 0.5rem;
+}
+
+.case-body strong {
+  color: var(--fathom-navy);
+  font-weight: 600;
+}
+
+.case-cta {
+  padding: 6rem 0;
+  background: var(--fathom-navy);
+  text-align: center;
+}
+
+.case-cta-content h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.case-cta-content p {
+  color: var(--gray-3);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.case-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .header-nav a:not(.header-cta) {
+    display: none;
+  }
+
+  .header-cta {
+    padding: 0.5rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bubble-1, .bubble-2, .bubble-3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bubble-2 {
+    bottom: 180px;
+  }
+
+  .bubbles-container {
+    min-height: 560px;
+  }
+
+  .philosophy-section {
+    padding: 4rem 0;
+  }
+
+  .positioning {
+    padding: 6rem 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

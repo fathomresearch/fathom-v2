@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Case Studies
+description: See how Fathom helps clients make confident decisions with fast, focused research.
+pagination:
+  data: collections.caseStudy
+  size: 100
+permalink: /case-studies/
+---
+
+<section class="case-studies-hero">
+  <div class="container">
+    <h1>Case Studies</h1>
+    <p>See how we've helped clients make confident decisions with research that delivers clarity, not just data.</p>
+  </div>
+</section>
+
+<section class="case-studies-grid-section">
+  <div class="container">
+    <div class="case-studies-grid">
+      {% for case in collections.caseStudy %}
+      <div class="case-card">
+        {% if case.data.image %}
+        <div class="case-card-image">
+          <img src="{{ case.data.image }}" alt="{{ case.data.title }}">
+        </div>
+        {% endif %}
+        
+        <div class="case-card-content">
+          <h3>{{ case.data.title }}</h3>
+          <p class="case-card-meta">{{ case.data.client }} | {{ case.data.industry }}</p>
+          <p class="case-card-description">{{ case.data.description }}</p>
+          <a href="{{ case.url }}" class="btn-secondary">View Case Study</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
