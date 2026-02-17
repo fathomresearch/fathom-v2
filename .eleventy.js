@@ -9,15 +9,13 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/fathom-v2/",
-    dir: {
-      input: "src",
-      output: "public",
-      includes: "_includes",
-      data: "_data"
-    },
-    templateFormats: ["njk", "md", "html"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
-  };
+  dir: {
+    input: "src",
+    output: "public",
+    includes: "_includes",
+    data: "_data"
+  },
+  templateFormats: ["njk", "md", "html"],
+  htmlTemplateEngine: "njk",
+  markdownTemplateEngine: "njk"
 };

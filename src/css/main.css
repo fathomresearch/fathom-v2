@@ -254,7 +254,7 @@ header {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/fathom-v2/images/pool-background.svg');
+  background-image: url('/images/pool-background.svg');
   background-size: cover;
   background-position: center;
   opacity: 0.6;
@@ -484,9 +484,9 @@ header {
   z-index: 0;
 }
 
-.philosophy-section-1::before { background-image: url('/fathom-v2/images/case-nascar.webp'); }
-.philosophy-section-2::before { background-image: url('/fathom-v2/images/case-sportsbook.webp'); }
-.philosophy-section-3::before { background-image: url('/fathom-v2/images/case-wealth.webp'); }
+.philosophy-section-1::before { background-image: url('/images/case-nascar.webp'); }
+.philosophy-section-2::before { background-image: url('/images/case-sportsbook.webp'); }
+.philosophy-section-3::before { background-image: url('/images/case-wealth.webp'); }
 
 .philosophy-content {
   position: relative;
