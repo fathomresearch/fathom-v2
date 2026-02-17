@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--fathom-navy);
-  text-transform: uppercase;
+  text-transform: Capitalize;
 }
 
 h1 { font-size: clamp(40px, 5vw, 72px); }
@@ -415,11 +415,11 @@ header {
 
 .hero-pov-headline {
   font-family: var(--font-headline);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(36px, 4.5vw, 64px);
   line-height: 1.05;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--white);
   margin: 0;
 }
@@ -457,7 +457,8 @@ header {
 }
 
 .positioning-highlight {
-  color: var(--fathom-teal);
+  color: var(--white);
+    font-weight: 500;
 }
 
 /* ============================================
