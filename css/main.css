@@ -773,12 +773,12 @@ header {
   padding: 2rem;
 }
 
-/* Case card headline: IBM Plex Serif, ALL CAPS */
+/* Case card headline: IBM Plex Serif, capitalize each words */
 .case-card-content h3 {
   font-family: var(--font-headline);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 22px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: -0.01em;
   color: var(--fathom-navy);
   margin-bottom: 0.5rem;
