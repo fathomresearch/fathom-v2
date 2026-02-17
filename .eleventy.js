@@ -1,16 +1,14 @@
 module.exports = function(eleventyConfig) {
-  // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
-  
-  // Create case study collection
+
   eleventyConfig.addCollection("caseStudy", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/case-studies/*.md");
   });
-  
-  // Set directories
+
   return {
+    pathPrefix: "/fathom-v2/",
     dir: {
       input: "src",
       output: "public",
@@ -19,8 +17,6 @@ module.exports = function(eleventyConfig) {
     },
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-        pathPrefix: "/fathom-v2/",
-  dir: { ... }
+    markdownTemplateEngine: "njk"
   };
 };
