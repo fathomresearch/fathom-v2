@@ -7,14 +7,12 @@ pagination:
   size: 100
 permalink: /case-studies/
 ---
-
 <section class="case-studies-hero">
   <div class="container">
     <h1>Case Studies</h1>
     <p>See how we've helped clients make confident decisions with research that delivers clarity, not just data.</p>
   </div>
 </section>
-
 <section class="case-studies-grid-section">
   <div class="container">
     <div class="case-studies-grid">
@@ -22,7 +20,7 @@ permalink: /case-studies/
       <div class="case-card">
         {% if case.data.image %}
         <div class="case-card-image">
-          <img src="{{ case.data.image }}" alt="{{ case.data.title }}">
+          <img src="{{ case.data.image | url }}" alt="{{ case.data.title }}">
         </div>
         {% endif %}
         
@@ -30,7 +28,7 @@ permalink: /case-studies/
           <h3>{{ case.data.title }}</h3>
           <p class="case-card-meta">{{ case.data.client }} | {{ case.data.industry }}</p>
           <p class="case-card-description">{{ case.data.description }}</p>
-          <a href="{{ case.url }}" class="btn-secondary">View Case Study</a>
+          <a href="{{ case.url | url }}" class="btn-secondary">View Case Study</a>
         </div>
       </div>
       {% endfor %}
