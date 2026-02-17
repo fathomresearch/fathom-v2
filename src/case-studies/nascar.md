@@ -1,6 +1,6 @@
 ---
 layout: case.njk
-title: "Research should be a reframe, not a receipt"
+title: "Research is a reframe, not a report"
 client: NASCAR
 industry: Sports & Entertainment
 image: /images/case-nascar.webp
