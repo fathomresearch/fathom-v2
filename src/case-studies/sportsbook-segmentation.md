@@ -5,7 +5,9 @@ client: Major Sportsbook
 industry: Gaming & Sports Betting
 image: /images/case-sportsbook.webp
 description: Turned segmentation data into a synthetic panel they could interrogate directly. Validated creative shifts in hours, not months.
+insight: "Strategy moves at the speed of insight, backed by data. Not just vibes and caffeine."
 tags: caseStudy
+
 ---
 
 ## The Problem
@@ -29,5 +31,3 @@ Need to test new messaging against all three segments? Ask them.
 Want to explore objections to a positioning shift? Have the conversation.
 
 Creative team has a wild idea at 9pm? Validate it before morning.
-
-**Strategy moves at the speed of insight, backed by data. Not just vibes and caffeine.**

@@ -902,7 +902,9 @@ header {
 }
 
 .case-body h2 {
-  font-size: clamp(24px, 3vw, 36px);
+  font-family: var(--font-sub);
+  font-weight: 600;
+  font-size: clamp(20px, 2.5vw, 28px);
   color: var(--fathom-navy);
   margin-top: 3rem;
   margin-bottom: 1.25rem;
@@ -938,6 +940,23 @@ header {
 .case-body strong {
   color: var(--fathom-navy);
   font-weight: 600;
+}
+
+/* Case Insight Section */
+.case-insight {
+  margin-top: 0rem;
+  padding: 2rem;
+  border-left: 4px solid var(--fathom-teal);
+    background: var(--gray-1);
+}
+
+.case-insight p {
+  font-family: var(--font-headline);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--fathom-navy);
+  margin: 0;
 }
 
 .case-cta {

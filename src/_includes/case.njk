@@ -18,10 +18,16 @@ layout: base.njk
       </div>
     </div>
   </section>
-  <!-- Case Content -->
+<!-- Case Content -->
   <section class="case-content">
     <div class="container">
       <div class="case-body">
+        {% if insight %}
+        <div class="case-insight">
+          <p>{{ insight }}</p>
+        </div>
+        {% endif %}
+
         {{ content | safe }}
       </div>
     </div>

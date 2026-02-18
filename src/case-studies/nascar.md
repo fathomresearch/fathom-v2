@@ -5,7 +5,9 @@ client: NASCAR
 industry: Sports & Entertainment
 image: /images/case-nascar.webp
 description: Helped NASCAR discover their sport isn't just entertainment—it's the rarest place on earth to feel something raw and real.
+insight: "The best research doesn't confirm what you already know. It reframes how you see the entire category."
 tags: caseStudy
+
 ---
 
 ## The Problem
@@ -23,5 +25,3 @@ We went deeper. Ethnographic research with NASCAR fans across the country. Not w
 The insight: NASCAR isn't just entertainment. It's the rarest place on earth to feel something raw and real.
 
 This became 'Hell Yeah'—a campaign amplifying the exhilaration and pride fans feel across the nation.
-
-**The best research doesn't confirm what you already know. It reframes how you see the entire category.**
