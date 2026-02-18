@@ -278,7 +278,7 @@ header {
 .bubbles-container {
   position: relative;
   min-height: 420px;
-  margin: 3rem auto 0;
+  margin: 0rem auto 0;
   max-width: 900px;
 }
 
@@ -409,7 +409,7 @@ header {
    HERO POV TEXT (used in Version A and B)
    ============================================ */
 .hero-pov {
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 0;
 }
 
