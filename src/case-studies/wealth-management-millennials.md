@@ -1,6 +1,6 @@
 ---
 layout: case.njk
-title: "Your hunch may be right, but is it Useful?"
+title: "Your hunch may be right, but is it useful?"
 client: Wealth Management Firm
 industry: Financial Services
 image: /images/case-wealth.webp
