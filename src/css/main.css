@@ -920,7 +920,7 @@ header {
 .case-body p {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--gray-4);
+  color: var(--fathom-navy);
   margin-bottom: 1.5rem;
 }
 
@@ -933,7 +933,7 @@ header {
 .case-body li {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--gray-4);
+  color: var(--fathom-navy);
   margin-bottom: 0.5rem;
 }
 

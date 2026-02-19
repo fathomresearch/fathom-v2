@@ -5,23 +5,41 @@ client: NASCAR
 industry: Sports & Entertainment
 image: /images/case-nascar.webp
 description: Helped NASCAR discover their sport isn't just entertainment—it's the rarest place on earth to feel something raw and real.
-insight: "The best research doesn't confirm what you already know. It reframes how you see the entire category."
+insight: "Research that reframes the problem vs telling you what you already know."
 tags: caseStudy
 
 ---
 
 ## The Problem
 
-NASCAR needed to understand what truly drives fan passion and differentiate their sport in an increasingly crowded entertainment landscape.
+NASCAR didn’t need another readout on fan satisfaction.
 
-The standard approach would be surveys and focus groups. Ask fans what they like. Chart the data. Deliver the findings.
+They needed clarity on what truly drives fan passion—and how to stand apart in an increasingly crowded entertainment landscape.
 
-But that would miss what really matters.
+The expected route?
+
+Run surveys. Host focus groups. Ask fans what they like. Chart the data. Deliver the findings.
+
+That approach would document preferences.
+
+It wouldn’t redefine the problem.
+
+Because the real question wasn’t *what do fans enjoy?*
+
+It was *what is NASCAR actually giving them that nothing else can?*
 
 ## The Solution
 
-We went deeper. Ethnographic research with NASCAR fans across the country. Not what they think. What they feel. Not surface preferences. Core emotional truth.
+We shifted the frame.
 
-The insight: NASCAR isn't just entertainment. It's the rarest place on earth to feel something raw and real.
+Through ethnographic research with NASCAR fans across the country, we focused less on stated opinions and more on lived experience. Not what they say. What they feel. Not surface attributes. Emotional truth.
 
-This became 'Hell Yeah'—a campaign amplifying the exhilaration and pride fans feel across the nation.
+The insight reframed the category:
+
+NASCAR isn’t just entertainment. It’s one of the last places people experience something raw and real.
+
+That reframe became **“Hell Yeah”**—a campaign built around the exhilaration and pride fans feel across the nation.
+
+The research didn’t validate assumptions.
+
+It redefined the value of NASCAR itself.
