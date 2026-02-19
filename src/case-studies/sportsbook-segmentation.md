@@ -1,11 +1,11 @@
 ---
 layout: case.njk
-title: "Research that keeps working for you, rather than dying in a drawer."
+insight: "Research that keeps working for you, rather than dying in a drawer."
 client: Major Sportsbook
 industry: Gaming & Sports Betting
 image: /images/case-sportsbook.webp
 description: A major sportsbook had three distinct audience segments and a creative brief that just changed. We turned their segmentation data into a synthetic panel they could interrogate directly. Test new messaging at 9pm? Validate it before morning.
-insight: "Strategy at the speed of insight, accelerated by data."
+title: "Strategy at the speed of insight, accelerated by data."
 tags: caseStudy
 
 ---

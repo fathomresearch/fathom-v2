@@ -1,11 +1,11 @@
 ---
 layout: case.njk
-title: "Research should be a reframe, not a receipt"
+insight: "Research should be a reframe, not a receipt"
 client: NASCAR
 industry: Sports & Entertainment
 image: /images/case-nascar.webp
-description: Helped NASCAR discover their sport isn't just entertainment—it's the rarest place on earth to feel something raw and real.
-insight: "Research that reframes the problem vs telling you what you already know."
+description: "We didn’t validate what people already said about NASCAR. We uncovered what they couldn’t articulate. The breakthrough was that NASCAR is one of the last places left where emotion isn’t filtered—where noise, speed, and pride collide into something raw and undeniable."
+title: "Research that reframes the problem vs telling you what you already know."
 tags: caseStudy
 
 ---
