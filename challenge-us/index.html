@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge Us | Fathom Research & Strategy</title>
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NXJ52R5RZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9NXJ52R5RZ');
+</script>
+  
   <meta name="description" content="Tell us what you&#39;re up against. Someone will get back to you within 48 hours.">
   
   <!-- Google Fonts -->
@@ -212,15 +221,48 @@ document.getElementById('proposal-form').addEventListener('submit', async functi
   const submitBtn = this.querySelector('.submit-btn');
   const messageDiv = document.getElementById('form-message');
 
+  // Client-side validation before sending
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const position = document.getElementById('position').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const request = document.getElementById('request').value.trim();
+
+  // Validate all fields are filled
+  if (!name || !email || !position || !company || !request) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'All fields are required.';
+    return;
+  }
+
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'Please enter a valid email address.';
+    return;
+  }
+    
+      // ADD THE LENGTH VALIDATION HERE ↓↓↓
+  if (request.length > 5000) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'Request is too long. Please keep it under 5000 characters.';
+    return;
+  }
+      // ↑↑↑ LENGTH VALIDATION ENDS HERE
+
   submitBtn.disabled = true;
   submitBtn.textContent = 'Submitting...';
 
   const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    position: document.getElementById('position').value,
-    company: document.getElementById('company').value,
-    request: document.getElementById('request').value,
+    name: name,
+    email: email,
+    position: position,
+    company: company,
+    request: request,
     submitted_at: new Date().toISOString()
   };
 
