@@ -180,15 +180,48 @@ document.getElementById('proposal-form').addEventListener('submit', async functi
   const submitBtn = this.querySelector('.submit-btn');
   const messageDiv = document.getElementById('form-message');
 
+  // Client-side validation before sending
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const position = document.getElementById('position').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const request = document.getElementById('request').value.trim();
+
+  // Validate all fields are filled
+  if (!name || !email || !position || !company || !request) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'All fields are required.';
+    return;
+  }
+
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'Please enter a valid email address.';
+    return;
+  }
+    
+      // ADD THE LENGTH VALIDATION HERE ↓↓↓
+  if (request.length > 5000) {
+    messageDiv.style.display = 'block';
+    messageDiv.style.borderColor = 'var(--coral)';
+    messageDiv.textContent = 'Request is too long. Please keep it under 5000 characters.';
+    return;
+  }
+      // ↑↑↑ LENGTH VALIDATION ENDS HERE
+
   submitBtn.disabled = true;
   submitBtn.textContent = 'Submitting...';
 
   const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    position: document.getElementById('position').value,
-    company: document.getElementById('company').value,
-    request: document.getElementById('request').value,
+    name: name,
+    email: email,
+    position: position,
+    company: company,
+    request: request,
     submitted_at: new Date().toISOString()
   };
 
