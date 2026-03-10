@@ -416,7 +416,7 @@ header {
 .hero-pov-headline {
   font-family: var(--font-headline);
   font-weight: 500;
-  font-size: clamp(36px, 4.5vw, 64px);
+  font-size: clamp(36px, 4.5vw, 75px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-transform: capitalize;
@@ -488,6 +488,25 @@ header {
 .philosophy-section-1::before { background-image: url('/images/case-nascar.webp'); }
 .philosophy-section-2::before { background-image: url('/images/case-sportsbook.webp'); }
 .philosophy-section-3::before { background-image: url('/images/case-wealth.webp'); }
+
+
+/* Philosophy Section 2 - Right aligned layout */
+.philosophy-section-2 .philosophy-content {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  max-width: 680px; /* Keep the same max-width but align it right */
+}
+
+.philosophy-section-2 .philosophy-eyebrow,
+.philosophy-section-2 .philosophy-label,
+.philosophy-section-2 .philosophy-value {
+  text-align: right;
+}
+
+.philosophy-section-2 .philosophy-cta {
+  text-align: right;
+}
 
 .philosophy-content {
   position: relative;
