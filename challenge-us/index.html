@@ -257,12 +257,12 @@ document.getElementById('proposal-form').addEventListener('submit', async functi
   submitBtn.disabled = true;
   submitBtn.textContent = 'Submitting...';
 
-  const formData = {
-    name: name,
-    email: email,
-    position: position,
-    company: company,
-    request: request,
+const formData = {
+    form_name: name,
+    form_email: email,
+    form_company: company,
+    form_position: position,
+    form_request: request,
     submitted_at: new Date().toISOString()
   };
 
