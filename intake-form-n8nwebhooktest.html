@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Form Master Workflow, updated Mar 11th, unified "form_something" structure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #071A2B;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'IBM Plex Serif', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #00D7B4;
+            margin-bottom: 40px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #BBBCC0;
+        }
+
+        input,
+        textarea {
+            background-color: #243A53;
+            border: 1px solid #524B7B;
+            color: #FFFFFF;
+            padding: 12px 16px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #00D7B4;
+            background-color: #2a4459;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .webhook-section {
+            border: 1px solid #524B7B;
+            border-radius: 6px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .webhook-section label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #524B7B;
+        }
+
+        .webhook-section input {
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            font-size: 13px;
+            color: #00D7B4;
+            border-color: #2a4459;
+            background-color: #0f2538;
+        }
+
+        .webhook-section input:focus {
+            border-color: #00D7B4;
+            background-color: #0f2538;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #1e3348;
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: #00D7B4;
+            color: #071A2B;
+            border: none;
+            padding: 16px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            margin-top: 16px;
+        }
+
+        button:hover {
+            background-color: #00c4a3;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background-color: #524B7B;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status {
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 24px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .status.success {
+            background-color: rgba(0, 215, 180, 0.1);
+            border: 1px solid #00D7B4;
+            color: #00D7B4;
+            display: block;
+        }
+
+        .status.error {
+            background-color: rgba(255, 67, 105, 0.1);
+            border: 1px solid #FF4369;
+            color: #FF4369;
+            display: block;
+        }
+
+        .status.info {
+            background-color: rgba(27, 115, 255, 0.1);
+            border: 1px solid #1B75FF;
+            color: #1B75FF;
+            display: block;
+        }
+
+        .response-details {
+            margin-top: 12px;
+            padding: 12px;
+            background-color: #243A53;
+            border-radius: 4px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Intake Form Master Workflow, updated Mar 11th, unified "form_something" structure</h1>
+        <p class="subtitle">Challenge Us Form</p>
+
+        <form id="challengeForm">
+
+            <div class="webhook-section">
+                <label for="webhookUrl">Webhook URL</label>
+                <input
+                    type="url"
+                    id="webhookUrl"
+                    name="webhookUrl"
+                    value="https://fathom1.app.n8n.cloud/webhook-test/c3cb6cb8-6aae-484f-aa40-ad5b8c20089f"
+                    placeholder="https://your-webhook-url.com/..."
+                    spellcheck="false"
+                    autocomplete="off"
+                >
+            </div>
+
+            <hr class="divider">
+
+            <div class="form-group">
+                <label for="form_name">Name *</label>
+                <input 
+                    type="text" 
+                    id="form_name" 
+                    name="form_name" 
+                    required
+                    placeholder="Your name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="form_email">Email *</label>
+                <input 
+                    type="email" 
+                    id="form_email" 
+                    name="form_email" 
+                    required
+                    placeholder="your.email@company.com"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="form_company">Company Name *</label>
+                <input 
+                    type="text" 
+                    id="form_company" 
+                    name="form_company" 
+                    required
+                    placeholder="Your company"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="form_position">Position *</label>
+                <input 
+                    type="text" 
+                    id="form_position" 
+                    name="form_position" 
+                    required
+                    placeholder="Your role"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="form_request">What does your company need? *</label>
+                <textarea 
+                    id="form_request" 
+                    name="form_request" 
+                    required
+                    placeholder="Tell us about your challenge..."
+                ></textarea>
+            </div>
+
+            <button type="submit">Send Challenge</button>
+        </form>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('challengeForm');
+        const statusDiv = document.getElementById('status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const webhookUrl = document.getElementById('webhookUrl').value.trim();
+
+            if (!webhookUrl) {
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '<strong>✗ Error</strong> Please enter a webhook URL.';
+                return;
+            }
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            statusDiv.className = 'status';
+            statusDiv.innerHTML = '';
+
+            const formData = {
+                form_name: form.form_name.value,
+                form_email: form.form_email.value,
+                form_company: form.form_company.value,
+                form_position: form.form_position.value,
+                form_request: form.form_request.value
+            };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const responseText = await response.text();
+                let responseData;
+                
+                try {
+                    responseData = JSON.parse(responseText);
+                } catch {
+                    responseData = responseText;
+                }
+
+                if (response.ok) {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = `
+                        <strong>✓ Success!</strong> Webhook received the data.
+                        <div class="response-details">
+                            <strong>Status:</strong> ${response.status} ${response.statusText}
+                            <strong>Response:</strong>
+                            ${JSON.stringify(responseData, null, 2)}
+                        </div>
+                    `;
+                    form.reset();
+                    document.getElementById('webhookUrl').value = webhookUrl;
+                } else {
+                    statusDiv.className = 'status error';
+                    statusDiv.innerHTML = `
+                        <strong>✗ Error</strong> Webhook returned an error.
+                        <div class="response-details">
+                            <strong>Status:</strong> ${response.status} ${response.statusText}
+                            <strong>Response:</strong>
+                            ${JSON.stringify(responseData, null, 2)}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = `
+                    <strong>✗ Network Error</strong>
+                    <div class="response-details">
+                        ${error.message}
+                        
+                        This could mean:
+                        • The webhook URL is not accessible
+                        • CORS is blocking the request
+                        • Network connectivity issue
+                    </div>
+                `;
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Challenge';
+            }
+        });
+    </script>
+</body>
+</html>
